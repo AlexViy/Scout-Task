@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title AJAX
+    script(type='text/javascript', src='./bower_components/knockout/dist/knockout.js')
+  body
+    button#btn(type='button', name='button') PUSH ME
+    tbody(data-bind='foreach: seats')
+      tr
+        td(data-bind='text: name')
+        td(data-bind='text: meal().mealName')
+        td(data-bind='text: meal().price')
+    script(type='text/javascript', src='./scripts.js')

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AJAX</title>
+    <script type="text/javascript" src="./bower_components/knockout/dist/knockout.js"></script>
+  </head>
+  <body>
+    <button id="btn" type="button" name="button">PUSH ME</button>
+    <tbody data-bind="foreach: seats">
+      <tr>
+        <td data-bind="text: name"></td>
+        <td data-bind="text: meal().mealName"></td>
+        <td data-bind="text: meal().price"></td>
+      </tr>
+    </tbody>
+    <script type="text/javascript" src="./scripts.js"></script>
+  </body>
+</html>
