@@ -1,11 +1,14 @@
 doctype html
-html(lang="eng")
+html
   head
-    meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
-    title Test-Task
-    link(rel="stylesheet" href="./css/style.css")
-  
+    meta(charset='utf-8')
+    title AJAX
+    script(type='text/javascript', src='./bower_components/knockout/dist/knockout.js')
   body
-    span(data-bind="text: name")
-    
+    button#btn(type='button', name='button') PUSH ME
+    tbody(data-bind='foreach: seats')
+      tr
+        td(data-bind='text: name')
+        td(data-bind='text: meal().mealName')
+        td(data-bind='text: meal().price')
+    script(type='text/javascript', src='./scripts.js')
