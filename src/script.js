@@ -5,14 +5,13 @@ window.onload =  function() {
   myRequest.onload = function() {
     var fanTeamObj =  JSON.parse(this.responseText);
     console.log(fanTeamObj);
+
+  function ViewModel() {
+    this.tournaments = ko.observableArray(fanTeamObj.tournaments);
+
+  }
+
+  ko.applyBindings(new ViewModel());
   };
   myRequest.send();
-
-
-
-
-
-
-
-ko.applyBindings();
 };
