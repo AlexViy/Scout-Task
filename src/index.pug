@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title Scout-Task
+    script(type='text/javascript', src='./bower_components/knockout/dist/knockout.js')
+  body
+    h2 Tournaments
+    table
+      thead
+        tr          
+          th Name
+          th Created at
+          th Buy in
+          th Rake
+          th Prize
+      tbody(data-bind="foreach: tournaments")
+        tr
+          td(data-bind="text: name")
+          td(data-bind="text: createdAt")
+          td(data-bind="text: buyIn")
+          td(data-bind="text: rake")
+          td(data-bind="text: prizePoolAmount")
+          td
+            button Join
+          
+        
+      
+    script(type='text/javascript', src='./scripts.js')
