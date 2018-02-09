@@ -5,10 +5,23 @@ html
     title AJAX
     script(type='text/javascript', src='./bower_components/knockout/dist/knockout.js')
   body
-    button#btn(type='button', name='button') PUSH ME
-    tbody(data-bind='foreach: seats')
-      tr
-        td(data-bind='text: name')
-        td(data-bind='text: meal().mealName')
-        td(data-bind='text: meal().price')
+    h2 Tournaments
+    table
+      thead
+        tr          
+          th Name
+          th Created at
+          th Buy in
+          th Rake
+          th Prize
+      tbody(data-bind="foreach: tournaments")
+        tr
+          td(data-bind="text: name")
+          td(data-bind="text: createdAt")
+          td(data-bind="text: buyIn")
+          td(data-bind="text: rake")
+          td(data-bind="text: prizePoolAmount")
+          
+        
+      
     script(type='text/javascript', src='./scripts.js')

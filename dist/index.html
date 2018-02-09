@@ -6,14 +6,27 @@
     <script type="text/javascript" src="./bower_components/knockout/dist/knockout.js"></script>
   </head>
   <body>
-    <button id="btn" type="button" name="button">PUSH ME</button>
-    <tbody data-bind="foreach: seats">
-      <tr>
-        <td data-bind="text: name"></td>
-        <td data-bind="text: meal().mealName"></td>
-        <td data-bind="text: meal().price"></td>
-      </tr>
-    </tbody>
+    <h2>Tournaments</h2>
+    <table>
+      <thead>
+        <tr>         
+          <th>Name</th>
+          <th>Created at</th>
+          <th>Buy in</th>
+          <th>Rake</th>
+          <th>Prize</th>
+        </tr>
+      </thead>
+      <tbody data-bind="foreach: tournaments">
+        <tr>
+          <td data-bind="text: name"></td>
+          <td data-bind="text: createdAt"></td>
+          <td data-bind="text: buyIn"></td>
+          <td data-bind="text: rake"></td>
+          <td data-bind="text: prizePoolAmount"></td>
+        </tr>
+      </tbody>
+    </table>
     <script type="text/javascript" src="./scripts.js"></script>
   </body>
 </html>
