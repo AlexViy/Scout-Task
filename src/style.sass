@@ -1,8 +1,38 @@
 // Global Reset
+@import url('https://fonts.googleapis.com/css?family=Open+Sans')
 *
   box-sizing: border-box
   padding: 0
   margin: 0
 
-h1, h2, h3, h4, h5, h6
-  -webkit-font-smoothing: auto
+body
+  padding: 16px
+  font-family: 'Open Sans', sans-serif
+
+table
+  border-collapse: collapse
+  th, td
+    padding: 8px 4px
+    border-collapse: collapse
+
+  thead
+    border-collapse: collapse
+    border: 1px solid #4CAF50
+    background: #4CAF50
+    color: #fff
+
+  tr
+    &:nth-child(even)
+      background-color: #f2f2f2
+    &:hover
+      background-color: #ddd
+
+  .button-cell
+    padding: 2px
+
+    .join-btn
+      position: relative
+      padding: 4px 8px
+      background: orange
+      color: white
+      border-radius: 4px
