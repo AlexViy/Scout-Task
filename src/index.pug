@@ -3,6 +3,7 @@ html
   head
     meta(charset='utf-8')
     title Scout-Task
+    link(rel='stylesheet' type='text/css' href='css/style.css')
     script(type='text/javascript', src='./bower_components/knockout/dist/knockout.js')
   body
     h2 Tournaments
@@ -14,15 +15,16 @@ html
           th Buy in
           th Rake
           th Prize
+          th
       tbody(data-bind="foreach: tournaments")
         tr
           td(data-bind="text: name")
-          td(data-bind="text: createdAt")
+          td(data-bind="text: new Date(createdAt).toUTCString().slice(0,-4)")
           td(data-bind="text: buyIn")
           td(data-bind="text: rake")
           td(data-bind="text: prizePoolAmount")
-          td
-            button Join
+          td.button-cell
+            button.join-btn Join
           
         
       
